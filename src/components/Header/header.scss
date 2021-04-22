@@ -1,0 +1,184 @@
+$pry_color: #4e123a;
+$sec_color: #001632;
+$background: #f2f6fc;
+
+@media (max-width: 800px,) {
+  .ant-layout-header {
+    padding: 0 20px 0 20px !important;
+  }
+  .header {
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    .nav-center,
+    .nav-right {
+      display: none;
+    }
+
+    .mobile-nav {
+      .hamburger-react {
+        margin: 8px 0;
+      }
+      .mobile-nav-menu {
+        position: absolute;
+        top: 64px;
+        left: 0px;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background-color: white;
+        z-index: 12;
+        ul {
+          padding-right: 35px;
+          text-align: end;
+          li {
+            list-style-type: none;
+            line-height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .header {
+    padding: 0 8%;
+    position: sticky;
+
+    .nav-large {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1500px;
+      margin: 0 auto;
+      .nav-left {
+        img {
+          margin-bottom: 10px;
+        }
+      }
+
+      .nav-right {
+        ul {
+          display: inline-flex;
+          list-style-type: none;
+          li {
+            margin-right: 30px;
+            a {
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobile-nav {
+      display: none;
+    }
+  }
+}
+
+.ant-layout-header {
+  background-color: rgb(248, 248, 251) !important;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  transform: translateY(0);
+  background-color: rgb(248, 248, 251);
+}
+.nav-left {
+  display: flex;
+
+  .app-name {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: $pry_color;
+  }
+
+  img {
+    width: 30px;
+    margin-right: 10px;
+  }
+}
+
+a {
+  color: black !important;
+  &:hover {
+    color: $pry_color !important;
+  }
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.anticon svg {
+  margin-right: 5px;
+}
+
+.ant-btn-primary {
+  background-color: $pry_color;
+  background: $pry_color;
+  border: $pry_color;
+  color: white;
+  a {
+    color: white;
+  }
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $pry_color;
+    border: $pry_color;
+  }
+}
+
+.ant-layout-footer {
+  background-color: white;
+  text-align: center;
+  color: $pry_color;
+}
+
+.ant-layout-content {
+  overflow: initial;
+}
+
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ant-btn {
+  padding: 10px 30px;
+  height: unset;
+  border-radius: 200px;
+  margin-top: 3px;
+}
+
+.ant-layout {
+  background-color: unset;
+}
+
+.ant-btn-ghost {
+  color: $pry_color;
+  background-color: white;
+  border-color: $pry_color;
+  &:hover {
+    border-color: $pry_color;
+    color: white;
+    background-color: $pry_color;
+  }
+}
+
+.active {
+  color: #702758 !important;
+  font-weight: 500;
+  font-size: 110%;
+}
