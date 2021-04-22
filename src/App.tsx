@@ -21,6 +21,7 @@ const App: FC = (props) => {
     <div>
       <Header />
       <Switch>
+        <Route exact path="/" component={Films} />
         <Route exact path="/films" component={Films} />
         <Route exact path="/films/:id" component={FilmItem} />
         <Route exact path="/people" component={People} />
